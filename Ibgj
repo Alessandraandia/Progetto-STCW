@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>STCW Page</title>
+  <style>
+    /* Stile della pagina */
+    body {
+      margin: 0;
+      padding: 0;
+      background-color: #ffe6f2; /* Rosa molto pallido */
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      font-family: Arial, sans-serif;
+      position: relative;
+    }
+
+    /* Stile per il testo STCW */
+    h1 {
+      font-size: 36px;
+      color: black;
+      position: absolute;
+      top: 40%;
+      transform: translateY(-100%);
+    }
+
+    /* Stile per il pulsante play */
+    .play-button {
+      width: 0;
+      height: 0;
+      border-left: 50px solid black;
+      border-top: 30px solid transparent;
+      border-bottom: 30px solid transparent;
+      cursor: pointer;
+      transition: transform 0.3s ease;
+    }
+
+    .play-button:hover {
+      transform: scale(1.1);
+    }
+
+    /* Stile per il nome */
+    .name {
+      position: absolute;
+      bottom: 20px;
+      text-align: center;
+      width: 100%;
+      font-size: 14px;
+      color: black;
+    }
+
+    /* Stile per la seconda parte che apparirà dopo il click */
+    .second-part {
+      display: none;
+      text-align: center;
+      font-size: 18px;
+      color: black;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Testo STCW -->
+  <h1>STCW</h1>
+
+  <!-- Pulsante Play -->
+  <div class="play-button" onclick="showSecondPart()"></div>
+
+  <!-- Nome dell'utente -->
+  <div class="name">J. Alessandra Andia J.</div>
+
+  <!-- Seconda parte della ricerca -->
+  <div id="second-part" class="second-part">
+    <p>Questa è la seconda parte della ricerca!</p>
+  </div>
+
+  <script>
+    // Funzione per mostrare la seconda parte quando si clicca il pulsante
+    function showSecondPart() {
+      document.getElementById('second-part').style.display = 'block';
+    }
+  </script>
+
+</body>
+</html>
